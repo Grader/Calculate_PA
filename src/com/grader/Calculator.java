@@ -20,7 +20,7 @@ public class Calculator {
     }
 
     public double division(double param1, double param2) {
-            this.result = param1 / param2;
+        this.result = param1 / param2;
         return this.result;
     }
 

@@ -13,10 +13,8 @@ public class InteractRunner {
 
         do {
             try {
-                if (first == 0.0) {
                     System.out.println("Enter first number:");
                     first = Double.parseDouble(input.ask());
-                }
             } catch (NumberFormatException exFirst) {
                 System.out.println("You entered not a number. Enter a number.");
             } finally {
