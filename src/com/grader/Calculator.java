@@ -4,24 +4,20 @@ public class Calculator {
 
     private double result;
 
-    public double add(double param1, double param2) {
+    public void add(double param1, double param2) {
             this.result = param1 + param2;
-        return this.result;
     }
 
-    public double subtraction(double param1, double param2) {
+    public void subtraction(double param1, double param2) {
             this.result = param1 - param2;
-        return this.result;
     }
 
-    public double multi(double param1, double param2) {
+    public void multi(double param1, double param2) {
             this.result = param1 * param2;
-        return this.result;
     }
 
-    public double division(double param1, double param2) {
+    public void division(double param1, double param2) {
         this.result = param1 / param2;
-        return this.result;
     }
 
     public void exp(double params, double ex) {
@@ -36,8 +32,7 @@ public class Calculator {
         return this.result;
     }
 
-    public double cleanResult() {
+    public void cleanResult() {
         this.result = 0.0;
-        return this.result;
     }
 }
