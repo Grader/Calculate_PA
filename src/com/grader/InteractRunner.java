@@ -9,17 +9,36 @@ public class InteractRunner {
         Calculator calc = new Calculator();
         BuffReader input = new BuffReader();
         Double first = 0.0;
+        Double second = 0.0;
 
         do {
             Validator validator = new Validator();
 
-            if (first == 0.0) {
-                System.out.println("Enter first number:");
-                first = Double.parseDouble(input.ask());
-            }
-            System.out.println("Enter second number:");
-            Double second = Double.parseDouble(input.ask());
+            try {
+                if (first == 0.0) {
+                    System.out.println("Enter first number:");
+                    first = Double.parseDouble(input.ask());
+                }
+            } catch (NumberFormatException exFirst) {
+                System.out.println("You entered not a number. Enter a number.");
+            } finally {
+                if (first == 0.0) {
+                    System.out.println("Enter first number:");
+                    first = Double.parseDouble(input.ask());
+                }
+                try {
+                    System.out.println("Enter second number:");
+                    second = Double.parseDouble(input.ask());
+                } catch (NumberFormatException exSecond) {
+                    System.out.println("You entered not a number. Enter a number.");
+                } finally {
+                    if (second == 0.0) {
+                        System.out.println("Enter second number:");
+                        second = Double.parseDouble(input.ask());
 
+                    }
+                }
+            }
             System.out.println("Enter action:");
             String action = input.ask();
             if (action.equals("+")) {
