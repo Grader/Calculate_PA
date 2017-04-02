@@ -40,7 +40,6 @@ public class InteractRunner {
             else if (action.equals("√")) {
                 calc.root(first, second);
             }
-
             System.out.println("Result: " + calc.getResult());
             System.out.println("Clear results? y/n");
             String clear = input.ask();
