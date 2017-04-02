@@ -8,8 +8,8 @@ public class InteractRunner {
 
         Calculator calc = new Calculator();
         BuffReader input = new BuffReader();
-        Double first = 0.0;
-        Double second = 0.0;
+        Double first = null;
+        Double second = null;
 
         do {
             try {
@@ -18,7 +18,7 @@ public class InteractRunner {
             } catch (NumberFormatException exFirst) {
                 System.out.println("You entered not a number. Enter a number.");
             } finally {
-                if (first == 0.0) {
+                if (first == null) {
                     System.out.println("Enter first number:");
                     first = Double.parseDouble(input.ask());
                 }
@@ -28,10 +28,9 @@ public class InteractRunner {
                 } catch (NumberFormatException exSecond) {
                     System.out.println("You entered not a number. Enter a number.");
                 } finally {
-                    if (second == 0.0) {
+                    if (second == null) {
                         System.out.println("Enter second number:");
                         second = Double.parseDouble(input.ask());
-
                     }
                 }
             }
@@ -55,6 +54,7 @@ public class InteractRunner {
             else if (action.equals("√")) {
                 calc.root(first, second);
             }
+
             System.out.println("Result: " + calc.getResult());
             System.out.println("Clear results? y/n");
             String clear = input.ask();
