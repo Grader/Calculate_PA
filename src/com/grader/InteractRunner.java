@@ -12,8 +12,6 @@ public class InteractRunner {
         Double second = 0.0;
 
         do {
-            Validator validator = new Validator();
-
             try {
                 if (first == 0.0) {
                     System.out.println("Enter first number:");
