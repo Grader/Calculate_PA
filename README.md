@@ -1,2 +1,2 @@
 # java_courses_PA
-A simple console calculator
+A simple console calculator.
