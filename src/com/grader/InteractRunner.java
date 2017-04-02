@@ -34,6 +34,12 @@ public class InteractRunner {
             else if (action.equals("/")) {
                 calc.division(first, second);
             }
+            else if (action.equals("^")) {
+                calc.exp(first, second);
+            }
+            else if (action.equals("√")) {
+                calc.root(first, second);
+            }
 
             System.out.println("Result: " + calc.getResult());
             System.out.println("Clear results? y/n");
